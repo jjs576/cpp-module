@@ -1,17 +1,17 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include "contact.hpp"
+# include "Contact.hpp"
 
 # include <limits>
 
-class PhoneBook{
+class Phonebook{
 private:
 	Contact	contacts[8];
 	int		amount;
 
 public:
-	PhoneBook();
+	Phonebook();
 	void	welcome();
 	void	run();
 	void	add();

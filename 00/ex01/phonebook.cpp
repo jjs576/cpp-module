@@ -1,18 +1,18 @@
-#include "phonebook.hpp"
+#include "Phonebook.hpp"
 
-PhoneBook::PhoneBook()
+Phonebook::Phonebook()
 {
 	this->amount = 0;
 }
 
-void	PhoneBook::welcome()
+void	Phonebook::welcome()
 {
 	std::cout << "** PHONE BOOK" << std::endl;
 	std::cout << "** Available Commands" << std::endl;
 	std::cout << "** ADD | SEARCH | EXIT " << std::endl;
 }
 
-void	PhoneBook::run()
+void	Phonebook::run()
 {
 	while (true) {
 		this->welcome();
@@ -41,10 +41,10 @@ void	PhoneBook::run()
 }
 
 
-void	PhoneBook::add()
+void	Phonebook::add()
 {
 	if (this->amount == 8)
-		std::cout << "PhoneBook is Full !!" << std::endl;
+		std::cout << "Phonebook is Full !!" << std::endl;
 	else {
 		this->contacts[this->amount].setIndex(this->amount);
 		this->contacts[this->amount].setValue();
@@ -52,12 +52,12 @@ void	PhoneBook::add()
 	}
 }
 
-void	PhoneBook::search()
+void	Phonebook::search()
 {
 	int index;
 
 	if (this->amount == 0)
-		std::cout << "PhoneBook is Empty !!" << std::endl;
+		std::cout << "Phonebook is Empty !!" << std::endl;
 	else {
 		std::cout << "|-------------------------------------------|" << std::endl;
 		std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
@@ -77,7 +77,7 @@ void	PhoneBook::search()
 	}
 }
 
-void	PhoneBook::exit()
+void	Phonebook::exit()
 {
 	std::cout << "** BYE !" << std::endl;
 }
