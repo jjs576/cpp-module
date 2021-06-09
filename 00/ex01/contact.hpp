@@ -9,19 +9,7 @@ class Contact{
 private:
 	std::string	field_value[11];
 	size_t		index;
-	const std::string	field_name[11] = {
-		"First Name",
-		"Last Name",
-		"Nick Name",
-		"Login",
-		"Postal Address",
-		"Email Address",
-		"Phone Number",
-		"Birthday Date",
-		"Favorite Meal",
-		"Underwear Color",
-		"Darkest Secret"
-	};
+	static std::string	field_name[11];
 
 public:
 	Contact();

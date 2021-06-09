@@ -1,9 +1,24 @@
 #include "Contact.hpp"
 
+std::string Contact::field_name[11] = {
+		"First Name",
+		"Last Name",
+		"Nick Name",
+		"Login",
+		"Postal Address",
+		"Email Address",
+		"Phone Number",
+		"Birthday Date",
+		"Favorite Meal",
+		"Underwear Color",
+		"Darkest Secret"
+	};
+
 Contact::Contact()
 {
 	for (size_t i = 0; i < 11; i++)
 		this->field_value[i] = std::string();
+	this->index = 0;
 }
 
 void	Contact::setIndex(size_t _index)
@@ -16,7 +31,7 @@ void	Contact::setValue()
 	std::cout << "** Contact #" << this->index << std::endl;
 	for (size_t i = 0; i < 11; i++) {
 		std::string	inputValue;
-		std::cout << "** Input your " << this->field_name[i] << std::endl;
+		std::cout << "** Input your " << Contact::field_name[i] << std::endl;
 		std::cout << "-> ";
 		std::getline(std::cin, inputValue);
 		this->field_value[i] = inputValue;
