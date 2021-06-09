@@ -9,7 +9,7 @@ Fixed::Fixed()
 Fixed::Fixed(Fixed const &origin)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->value = origin.getRawBits();
+	*this = origin;
 }
 
 Fixed::~Fixed()
