@@ -54,7 +54,7 @@ void	Phonebook::add()
 
 void	Phonebook::search()
 {
-	int index;
+	int index = -1;
 
 	if (this->amount == 0)
 		std::cout << "Phonebook is Empty !!" << std::endl;
