@@ -6,8 +6,8 @@
 
 int main() {
 	{
-		Bureaucrat yespark("yespark", 6);
-		Bureaucrat nopark("nopark", 138);
+		Bureaucrat yesman("yesman", 6);
+		Bureaucrat noman("noman", 138);
 
 		Form *cherryTree = new ShrubberyCreationForm("cherryTree");
 		Form *ordinaryTree = new ShrubberyCreationForm("ordinaryTree");
@@ -17,35 +17,35 @@ int main() {
 		std::cout << "---------sign OK--------------------" << std::endl;
 		std::cout << "---------excute OK------------------" << std::endl;
 		std::cout << "------------------------------------" << std::endl;
-		std::cout << yespark << std::endl;
+		std::cout << yesman << std::endl;
 		std::cout << *cherryTree << std::endl;
 		std::cout << std::endl;
 
-		yespark.signForm(*cherryTree);
-		yespark.excuteForm(*cherryTree);
+		yesman.signForm(*cherryTree);
+		yesman.excuteForm(*cherryTree);
 
 		std::cout << std::endl;
 		std::cout << "------------------------------------" << std::endl;
 		std::cout << "---------sign Not Yet---------------" << std::endl;
 		std::cout << "---------excute NO------------------" << std::endl;
 		std::cout << "------------------------------------" << std::endl;
-		std::cout << nopark << std::endl;
+		std::cout << noman << std::endl;
 		std::cout << *ordinaryTree << std::endl;
 		std::cout << std::endl;
 
-		nopark.excuteForm(*ordinaryTree);
+		noman.excuteForm(*ordinaryTree);
 
 		std::cout << std::endl;
 		std::cout << "------------------------------------" << std::endl;
 		std::cout << "---------sign Yes-------------------" << std::endl;
 		std::cout << "---------excute NO------------------" << std::endl;
 		std::cout << "------------------------------------" << std::endl;
-		std::cout << nopark << std::endl;
+		std::cout << noman << std::endl;
 		std::cout << *ordinaryTree << std::endl;
 		std::cout << std::endl;
 
-		nopark.signForm(*ordinaryTree);
-		nopark.excuteForm(*ordinaryTree);
+		noman.signForm(*ordinaryTree);
+		noman.excuteForm(*ordinaryTree);
 
 		delete cherryTree;
 		delete ordinaryTree;
@@ -60,10 +60,10 @@ int main() {
 		std::cout << "---------robo test------------------" << std::endl;
 		std::cout << "------------------------------------" << std::endl;
 
-		Bureaucrat yespark("yespark", 1);
+		Bureaucrat yesman("yesman", 1);
 		Form *robo = new RobotomyRequestForm("robo");
-		yespark.signForm(*robo);
-		yespark.excuteForm(*robo);
+		yesman.signForm(*robo);
+		yesman.excuteForm(*robo);
 
 		delete robo;
 	}
@@ -77,10 +77,10 @@ int main() {
 		std::cout << "---------pres test------------------" << std::endl;
 		std::cout << "------------------------------------" << std::endl;
 
-		Bureaucrat yespark("yespark", 1);
+		Bureaucrat yesman("yesman", 1);
 		Form *president = new PresidentialPardonForm("president");
-		yespark.signForm(*president);
-		yespark.excuteForm(*president);
+		yesman.signForm(*president);
+		yesman.excuteForm(*president);
 		delete president;
 	}
 

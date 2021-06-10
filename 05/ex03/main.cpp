@@ -9,7 +9,7 @@ int main()
 	Form* pForm;
 	Form* falseForm;
 
-	Bureaucrat yespark("yespark", 1);
+	Bureaucrat yesman("yesman", 1);
 
 
 	rForm = intern.makeForm("robotomy request", "inovation_academy");
@@ -17,7 +17,7 @@ int main()
 	pForm = intern.makeForm("presidential pardon", "blue_house");
 
 	try {
-		falseForm = intern.makeForm("hhhhh", "hhh");	
+		falseForm = intern.makeForm("hhhhh", "hhh");
 	} catch (std::exception const &exception) {
 		std::cout << std::endl;
 		std::cout << exception.what() << std::endl;
@@ -25,14 +25,14 @@ int main()
 	}
 
 	std::cout << "------------sign form-------------" << std::endl;
-	yespark.signForm(*sForm);
-	yespark.signForm(*rForm);
-	yespark.signForm(*pForm);
+	yesman.signForm(*sForm);
+	yesman.signForm(*rForm);
+	yesman.signForm(*pForm);
 
 	std::cout << "------------excute form-------------" << std::endl;
-	yespark.excuteForm(*rForm);
-	yespark.excuteForm(*sForm);
-	yespark.excuteForm(*pForm);
+	yesman.excuteForm(*rForm);
+	yesman.excuteForm(*sForm);
+	yesman.excuteForm(*pForm);
 
 	delete rForm;
 	delete sForm;
