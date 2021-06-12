@@ -9,15 +9,22 @@ int main()
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 	ICharacter* me = new Character("me");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	AMateria* ice;
+	ice = src->createMateria("ice");
+	me->equip(ice);
+	AMateria* cure;
+	cure = src->createMateria("cure");
+	me->equip(cure);
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
+	me->use(0, *bob);
+	me->use(0, *bob);
 	me->use(1, *bob);
-
+	me->use(1, *bob);
+	me->use(1, *bob);
+	me->use(1, *bob);
+	std::cout << "ice XP : " << ice->getXP() << std::endl;
+	std::cout << "cure XP : " << cure->getXP() << std::endl;
 	delete bob;
 	delete me;
 	delete src;
